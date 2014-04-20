@@ -1,0 +1,45 @@
+{
+  "name": "fullmoon",
+  "version": "0.0.0",
+  "description": "This is a Framework that can help to generate views for your applications",
+  "main": "lib/fullmoon.min.js",
+  "dependencies": {
+    "async": "~0.7.0",
+    "beast-test": "~0.0.14",
+    "commander": "~2.2.0",
+    "coffee-stir": "~0.0.31",
+    "beast-trigger": "~0.0.2"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sugar":"node node_modules/coffee-stir/bin/cli.js -o bin/Application.coffee src/Main.coffee",
+    "build-coffee":"node node_modules/coffee-script/bin/coffee -c -o lib/ bin/Application.coffee",
+    
+    "build-test-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.build.coffee testSrc/MainTest.coffee",
+    "build-test-coffee":"node node_modules/coffee-script/bin/coffee -o test -j test.js testSrc/test.build.coffee",
+    
+    "run-test":"npm run-script build-sugar && npm run-script build-coffee && npm run-script build-test-sugar && npm run-script build-test-coffee && node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "fullmoon",
+    "beastjavascript",
+    "generator",
+    "PHP",
+    "laravel",
+    "handlebars",
+    "mustache",
+    "beast",
+    "javascript",
+    "coffee-stir",
+    "beast-test"
+  ],
+  "author": "Shavauhn Gabay",
+  "license": "MIT"
+}
