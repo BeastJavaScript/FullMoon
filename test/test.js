@@ -21,7 +21,8 @@
     };
 
     SectionDirectiveTest.prototype.testAbstractClass = function(obj) {
-      return this.assertNotNull(obj);
+      this.assertNotNull(obj);
+      return this.assertTrue(obj.canHandle("#section parent section"));
     };
 
     return SectionDirectiveTest;
@@ -45,7 +46,8 @@
     };
 
     RepeatDirectiveTest.prototype.testAbstractClass = function(obj) {
-      return this.assertNotNull(obj);
+      this.assertNotNull(obj);
+      return this.assertTrue(obj.canHandle("#repeat 4"));
     };
 
     return RepeatDirectiveTest;
@@ -69,7 +71,8 @@
     };
 
     ParentDirectiveTest.prototype.testAbstractClass = function(obj) {
-      return this.assertNotNull(obj);
+      this.assertNotNull(obj);
+      return this.assertTrue(obj.canHandle("#parent content"));
     };
 
     return ParentDirectiveTest;

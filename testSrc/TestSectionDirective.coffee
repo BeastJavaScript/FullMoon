@@ -10,4 +10,5 @@ new (class SectionDirectiveTest extends TestCase
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#section parent section"))
 )

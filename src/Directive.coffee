@@ -5,7 +5,7 @@ class Directive
         @static=@constructor
         @static.regex ?= new RegExp("##{@symbol} #{@input}")
     canHandle:(text)->
-        if (result=@static.regex.exec()) isnt null
+        if (result=@static.regex.exec(text)) isnt null
             return true
         else
             return false

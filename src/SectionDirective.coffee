@@ -2,6 +2,6 @@
 
 class SectionDirective extends Directive
   constructor:->
-    super("parent","[^ ]+")
+    super("section","[^ ]+")
 
 exports.SectionDirective=SectionDirective

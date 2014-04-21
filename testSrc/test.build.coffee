@@ -10,6 +10,7 @@ new (class SectionDirectiveTest extends TestCase
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#section parent section"))
 )
 {TestCase} =require "beast-test"
 {RepeatDirective}= require "../lib/Application.js"
@@ -23,6 +24,7 @@ new (class RepeatDirectiveTest extends TestCase
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#repeat 4"))
 )
 {TestCase} =require "beast-test"
 {ParentDirective}= require "../lib/Application.js"
@@ -36,6 +38,7 @@ new (class ParentDirectiveTest extends TestCase
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#parent content"))
 )
 {TestCase} =require "beast-test"
 {NeedDirective}= require "../lib/Application.js"

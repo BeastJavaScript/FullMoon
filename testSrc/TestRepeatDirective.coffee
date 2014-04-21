@@ -10,4 +10,5 @@ new (class RepeatDirectiveTest extends TestCase
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#repeat 4"))
 )

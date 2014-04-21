@@ -10,4 +10,5 @@ new (class ParentDirectiveTest extends TestCase
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#parent content"))
 )

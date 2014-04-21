@@ -2,6 +2,6 @@
 
 class RepeatDirective extends Directive
   constructor:->
-    super("parent","[^ ]+")
+    super("repeat","[0-9]+")
 
 exports.RepeatDirective=RepeatDirective

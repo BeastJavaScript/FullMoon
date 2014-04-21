@@ -5,7 +5,7 @@ class Directive
         @static=@constructor
         @static.regex ?= new RegExp("##{@symbol} #{@input}")
     canHandle:(text)->
-        if (result=@static.regex.exec()) isnt null
+        if (result=@static.regex.exec(text)) isnt null
             return true
         else
             return false
@@ -23,14 +23,14 @@ exports.Directive=Directive
 
 class SectionDirective extends Directive
   constructor:->
-    super("parent","[^ ]+")
+    super("section","[^ ]+")
 
 exports.SectionDirective=SectionDirective
 
 
 class RepeatDirective extends Directive
   constructor:->
-    super("parent","[^ ]+")
+    super("repeat","[0-9]+")
 
 exports.RepeatDirective=RepeatDirective
 
