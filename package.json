@@ -14,14 +14,14 @@
     "coffee-script": "~1.7.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run-script run-test",
     "build-sugar":"node node_modules/coffee-stir/bin/cli.js -o bin/Application.coffee src/Main.coffee",
     "build-coffee":"node node_modules/coffee-script/bin/coffee -c -o lib/ bin/Application.coffee",
     
     "build-test-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.build.coffee testSrc/MainTest.coffee",
-    "build-test-coffee":"node node_modules/coffee-script/bin/coffee -o test -j test.js testSrc/test.build.coffee",
+    "build-test-coffee":"node node_modules/coffee-script/bin/coffee -o test testSrc/test.build.coffee  && mv test/test.build.js test/test.js",
     
-    "run-test":"npm run-script build-sugar && npm run-script build-coffee && npm run-script build-test-sugar && npm run-script build-test-coffee && node test/test.js"
+    "run-test":"npm run-script build-sugar && npm run-script build-coffee && npm run-script build-test-sugar && npm run-script build-test-coffee && echo 'running test' && node test/test.js"
   },
   "repository": {
     "type": "git",

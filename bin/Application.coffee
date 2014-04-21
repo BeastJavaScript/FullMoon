@@ -21,6 +21,18 @@ class Directive
 exports.Directive=Directive
 
 
+class SectionDirective extends Directive
+  constructor:->
+    super("parent","[^ ]+")
+
+exports.SectionDirective=SectionDirective
+
+
+class RepeatDirective extends Directive
+  constructor:->
+    super("parent","[^ ]+")
+
+exports.RepeatDirective=RepeatDirective
 
 
 class ParentDirective extends Directive

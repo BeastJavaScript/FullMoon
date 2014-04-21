@@ -2,9 +2,9 @@
 {Directive}= require "../lib/Application.js"
 
 
-new class TestDirective extends TestCase
+new (class TestDirective extends TestCase
 	constructor:->
-		super()
+    super()
 
 	base:->
 		try 
@@ -15,3 +15,4 @@ new class TestDirective extends TestCase
 
 	testAbstractClass:(obj)->
 		@assertEquals(obj.message,"Class Directive is an Abstract Class")
+)
