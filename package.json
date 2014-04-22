@@ -9,7 +9,8 @@
     "commander": "~2.2.0",
     "coffee-stir": "~0.0.31",
     "beast-trigger": "~0.0.2",
-    "chokidar": "*"
+    "chokidar": "*",
+    "node-dir": "*"
   },
   "devDependencies": {
     "coffee-script": "~1.7.1"
