@@ -3,15 +3,18 @@ class Directive
         if @constructor is Directive
             throw new Error("Class Directive is an Abstract Class")
         @static=@constructor
-        @static.regex ?= new RegExp("##{@symbol} #{@input}")
+        unless @input is null
+          @regex=new RegExp("##{@symbol} #{@input}")
+        else
+          @regex=new RegExp("##{@symbol}")
     canHandle:(text)->
-        if (result=@static.regex.exec(text)) isnt null
+        if (result=@regex.exec(text)) isnt null
             return true
         else
             return false
 
     getDirective:(text)->
-        result=@static.regex.exec(text)
+        result=@regex.exec(text)
         string=result[0]
         stringSplit=string.split(" ")
         key=stringSplit.unshift()
@@ -30,12 +33,14 @@ class DirectoryManager
   watchDirectory:->
     #nothing
 
-  loadFiles:(directory,match=null,exclude=null)->
+  loadFiles:(directory,match=null,exclude=null,callback2=null)->
     callback=(err, files)->
       for file in files
         if match is null or (new RegExp(match)).exec(file)
           if exclude is null or (new RegExp(exclude)).exec(file) is null
             @add(file)
+      if callback2 isnt null
+        callback2.call()
     callback=callback.bind(@)
     @dirRead.files(directory,callback)
 
@@ -43,8 +48,13 @@ class DirectoryManager
   add:(file)->
     @files.push file
 
+  toString:->
+    "[DirectoryManager]"
+
+
 
 exports.DirectoryManager=DirectoryManager
+
 
 
 class SectionDirective extends Directive
