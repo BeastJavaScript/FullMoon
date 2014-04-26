@@ -5,14 +5,16 @@
   "main": "lib/fullmoon.min.js",
   "dependencies": {
     "async": "~0.7.0",
-    "beast-test": "~0.0.14",
-    "commander": "~2.2.0",
-    "coffee-stir": "~0.0.31",
     "beast-trigger": "~0.0.2",
+    "uglifyjs": "*",
+    "commander": "~2.2.0",
     "chokidar": "*",
-    "node-dir": "*"
+    "node-dir": "*",
+    "mega-reader": "*"
   },
   "devDependencies": {
+    "coffee-stir": "~0.0.31",
+    "beast-test": "~0.0.14",
     "coffee-script": "~1.7.1"
   },
   "scripts": {

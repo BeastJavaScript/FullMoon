@@ -1,5 +1,6 @@
 #include TestDirective.coffee
 #include TestNeedDirective.coffee
+#include TestRenderDirective.coffee
 #include TestParentDirective.coffee
 #include TestRepeatDirective.coffee
 #include TestSectionDirective.coffee

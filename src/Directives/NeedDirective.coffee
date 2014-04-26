@@ -2,6 +2,6 @@
 
 class NeedDirective extends Directive
 	constructor:->
-		super("need","[^ ]+")
+		super("need","[^\s\r\n]+")
 
 exports.NeedDirective=NeedDirective

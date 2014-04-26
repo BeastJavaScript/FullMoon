@@ -6,9 +6,10 @@ new (class RepeatDirectiveTest extends TestCase
     super()
 
   base:->
-    d=new RepeatDirective("fake","fake")
+    d=new RepeatDirective
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
     @assertTrue(obj.canHandle("#repeat 4"))
+    @assertTrue(!obj.canHandle("#repe 4"))
 )

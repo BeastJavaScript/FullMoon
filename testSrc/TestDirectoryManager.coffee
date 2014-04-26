@@ -13,13 +13,19 @@ new (class TestDirectoryManager extends TestCase
     async.series(
       [
         (callback)->
-          console.log "reading the files"
-          dm.loadFiles("./",null,"^(node_modules|\\.)",callback)
+          process.output.debug "starting to load directory"
+          allFileLoadedandParsed = (err)->
+            process.output.debug "allfiledloadedandparse has been called"
+            callback.call()
+            process.output.debug "all files loaded and parsed"
+
+          dm.loadFiles("./","html$","^(node_modules|\\.)",allFileLoadedandParsed)
       ,
         (callback)=>
-          console.log "asserting true"
           @assertTrue(dm.files.length>0)
           callback.call()
+          process.output.debug(dm)
+
       ]
       ,
       ()=>

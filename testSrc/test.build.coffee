@@ -13,13 +13,19 @@ new (class TestDirectoryManager extends TestCase
     async.series(
       [
         (callback)->
-          console.log "reading the files"
-          dm.loadFiles("./",null,"^(node_modules|\\.)",callback)
+          process.output.debug "starting to load directory"
+          allFileLoadedandParsed = (err)->
+            process.output.debug "allfiledloadedandparse has been called"
+            callback.call()
+            process.output.debug "all files loaded and parsed"
+
+          dm.loadFiles("./","html$","^(node_modules|\\.)",allFileLoadedandParsed)
       ,
         (callback)=>
-          console.log "asserting true"
           @assertTrue(dm.files.length>0)
           callback.call()
+          process.output.debug(dm)
+
       ]
       ,
       ()=>
@@ -27,6 +33,7 @@ new (class TestDirectoryManager extends TestCase
         console.log TestCase.getResult()
     )
 )
+
 {TestCase} = require "beast-test"
 {SectionDirective}= require "../lib/Application.js"
 
@@ -49,11 +56,12 @@ new (class RepeatDirectiveTest extends TestCase
     super()
 
   base:->
-    d=new RepeatDirective("fake","fake")
+    d=new RepeatDirective
 
   testAbstractClass:(obj)->
     @assertNotNull(obj)
     @assertTrue(obj.canHandle("#repeat 4"))
+    @assertTrue(!obj.canHandle("#repe 4"))
 )
 {TestCase} =require "beast-test"
 {ParentDirective}= require "../lib/Application.js"
@@ -68,6 +76,20 @@ new (class ParentDirectiveTest extends TestCase
   testAbstractClass:(obj)->
     @assertNotNull(obj)
     @assertTrue(obj.canHandle("#parent content"))
+)
+{TestCase} =require "beast-test"
+{RenderDirective}= require "../lib/Application.js"
+
+new (class RenderDirectiveTest extends TestCase
+  constructor:->
+    super()
+
+  base:->
+    d=new RenderDirective
+
+  testRenderDirective:(obj)->
+    @assertNotNull(obj)
+    @assertTrue(obj.canHandle("#render"))
 )
 {TestCase} =require "beast-test"
 {NeedDirective}= require "../lib/Application.js"
@@ -101,6 +123,7 @@ new (class TestDirective extends TestCase
 	testAbstractClass:(obj)->
 		@assertEquals(obj.message,"Class Directive is an Abstract Class")
 )
+
 
 
 

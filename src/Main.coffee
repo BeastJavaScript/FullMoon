@@ -1,5 +1,8 @@
-#include Directives/NeedDirective.coffee
-#include Directives/ParentDirective.coffee
-#include Directives/RepeatDirective.coffee
-#include Directives/SectionDirective.coffee
-#include Directives/DirectoryManager.coffee
+#include Directives/DirectiveLoader.coffee
+#include DirectoryManager.coffee
+#include FileManager.coffee
+#include RenderLine.coffee
+
+fs = require('fs')
+Log = require('log')
+process.output = new Log('debug', fs.createWriteStream('my.log'))
