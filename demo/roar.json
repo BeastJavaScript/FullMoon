@@ -1,0 +1,23 @@
+{
+    "version":"0.0.0",
+    "path":{
+        "model":"app/model",
+        "view":"app/view",
+        "controller":"app/controller",
+        "asset":{
+            "index":"asset",
+            "css":"asset/css",
+            "js":"asset/js",
+            "image":"asset/image"
+        }
+    },
+    "view":{
+        "extention":{
+            "input":"html",
+            "output":"php"
+        },
+        "include":"<?php include(\"_FILE_._EXT_\")?>",
+        "variable":"<?php echo _VAR_ ?>",
+        "method":"<?php echo _METHOD_ ?>"
+    }
+}
