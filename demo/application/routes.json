@@ -1,0 +1,18 @@
+{
+  "routes": [
+    {
+      "name": "profile",
+      "controller": "UserController",
+      "method": "profile",
+      "url": "/user/{username}",
+      "match": "/user/[^/]+"
+    },
+    {
+      "name": "settings",
+      "controller": "UserController",
+      "method": "settings",
+      "url": "/user/{username}/settings/{id [0-9]+}",
+      "match": "/user/[^/]+/settings/[0-9]+"
+    }
+  ]
+}

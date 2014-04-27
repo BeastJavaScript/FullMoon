@@ -7,4 +7,7 @@
 #include TestDirectoryManager.coffee
 
 
+#include RouteTest.coffee
+
+
 console.log TestCase.getResult()

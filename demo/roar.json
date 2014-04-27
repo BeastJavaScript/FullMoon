@@ -1,14 +1,18 @@
 {
     "version":"0.0.0",
     "path":{
-        "model":"app/model",
-        "view":"app/view",
-        "controller":"app/controller",
+        "route-builder":"routebuilder",
+        "app":"application/app",
+        "model":"application/app/model",
+        "view":"application/app/view",
+        "controller":"application/app/controller",
+        "viewbuilder":"viewbuilder",
+        "view-preview":"preview",
         "asset":{
-            "index":"asset",
-            "css":"asset/css",
-            "js":"asset/js",
-            "image":"asset/image"
+            "index":"application/asset",
+            "css":"application/asset/css",
+            "js":"application/asset/js",
+            "image":"application/asset/image"
         }
     },
     "view":{

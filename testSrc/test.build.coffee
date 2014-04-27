@@ -1,3 +1,20 @@
+{TestCase}= require "beast-test"
+{PHPRouteBuilder}= require "../lib/Application.js"
+
+
+new (class RouteTest extends TestCase
+  constructor:->
+    super()
+
+
+  base:->
+    new PHPRouteBuilder("demo/routebuilder/route.json")
+
+  testRouteBuilder:(builder)->
+    builder.export("demo/application/routes.json")
+
+
+)
 {TestCase}=require "beast-test"
 {DirectoryManager}= require "../lib/Application.js"
 async=require "async"
@@ -19,7 +36,7 @@ new (class TestDirectoryManager extends TestCase
             callback.call()
             process.output.debug "all files loaded and parsed"
 
-          dm.loadFiles("./","html$","^(node_modules|\\.)",allFileLoadedandParsed)
+          dm.loadFiles("demo/viewbuilder","html$","^(node_modules|\\.)",allFileLoadedandParsed)
       ,
         (callback)=>
           @assertTrue(dm.files.length>0)
@@ -123,6 +140,9 @@ new (class TestDirective extends TestCase
 	testAbstractClass:(obj)->
 		@assertEquals(obj.message,"Class Directive is an Abstract Class")
 )
+
+
+
 
 
 

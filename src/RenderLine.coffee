@@ -84,9 +84,6 @@ class RenderLine
         unless stop
           continue
 
-      console.log "rendering #{reader.files}"
-      console.log repeat
-
       if repeat>0
         reader.reset()
         repeat--
