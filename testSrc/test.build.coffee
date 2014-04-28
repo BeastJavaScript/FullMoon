@@ -36,7 +36,7 @@ new (class TestDirectoryManager extends TestCase
             callback.call()
             process.output.debug "all files loaded and parsed"
 
-          dm.loadFiles("demo/viewbuilder","html$","^(node_modules|\\.)",allFileLoadedandParsed)
+          dm.loadFiles("demo/viewbuilder","demo/preview","html$","^(node_modules|\\.)",allFileLoadedandParsed)
       ,
         (callback)=>
           @assertTrue(dm.files.length>0)

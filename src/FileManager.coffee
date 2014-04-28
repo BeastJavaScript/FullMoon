@@ -2,7 +2,9 @@ fs= require "fs"
 {MegaFile}=require "mega-reader"
 
 class FileManager
-  constructor:(@filename,@callback=null,@stack)->
+  constructor:(@filename,@bin,@stack)->
+    console.log "inside the file manager #{@filename}"
+
     @mr= new MegaFile([@filename])
     @tools=[]
     @needed=[]
@@ -47,8 +49,10 @@ class FileManager
 
     if (cd=new ChildDirective).canHandle(file)
       @child.push cd.getDirective(file).value
+    console.log "**************************************"
+    console.log "analysis complete for #{@filename}"
+    console.log "**************************************"
 
-    @callback.call()
 
   build:(callback)->
     if @render
@@ -57,7 +61,7 @@ class FileManager
 
   buildRenderLine:->
     process.output.debug "building renderline"
-    @renderline = new RenderLine(@name,@stack)
+    @renderline = new RenderLine(@name,@bin,@stack)
     item=@
     while true
       unless item

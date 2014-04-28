@@ -8,12 +8,9 @@ path= require "path"
 os= require "os"
 
 class RenderLine
-  constructor:(@name,@stack)->
+  constructor:(@name,@bin,@stack)->
     process.output.debug "renderline #{@name} created"
-    @path="./preview"
     @line=[]
-
-
 
   clear:->
     @position=-1
@@ -53,12 +50,12 @@ class RenderLine
 
 
   makefile:->
-    unless fs.existsSync(@path)
-      mkdirp.sync(@path)
+    unless fs.existsSync(@bin)
+      mkdirp.sync(@bin)
     fs.openSync(@previewFile(),"w")
 
   previewFile:->
-    "#{@path}#{path.sep}#{@name}.html"
+    "#{@bin}#{path.sep}#{@name}.html"
 
 
   printFile:(file,reader,repeat=1)->

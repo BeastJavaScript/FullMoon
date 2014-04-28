@@ -54,7 +54,7 @@
             callback.call();
             return process.output.debug("all files loaded and parsed");
           };
-          return dm.loadFiles("demo/viewbuilder", "html$", "^(node_modules|\\.)", allFileLoadedandParsed);
+          return dm.loadFiles("demo/viewbuilder", "demo/preview", "html$", "^(node_modules|\\.)", allFileLoadedandParsed);
         }, (function(_this) {
           return function(callback) {
             _this.assertTrue(dm.files.length > 0);
