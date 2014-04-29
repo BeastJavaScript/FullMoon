@@ -55,6 +55,7 @@ class DirectoryManager
 
 
 
+
   add:(file,bin)->
     fm=new FileManager(file,bin,@files)
     for f in @files when f.name is fm.name
