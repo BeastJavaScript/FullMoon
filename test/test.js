@@ -16,7 +16,7 @@
     }
 
     RouteTest.prototype.base = function() {
-      return new PHPRouteBuilder("demo/routebuilder/route.json");
+      return new PHPRouteBuilder("demo/routebuilder/routes.json");
     };
 
     RouteTest.prototype.testRouteBuilder = function(builder) {

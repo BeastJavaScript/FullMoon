@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Url' => $baseDir . '/app/engine/Url.php',
+    'UserController' => $baseDir . '/app/controller/UserController.php',
 );

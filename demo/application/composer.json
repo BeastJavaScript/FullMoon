@@ -3,7 +3,7 @@
         "illuminate/database": "4.*"
     },
     "autoload":{
-        "classmap":["lib","app/controller","app/model","app/view","app/system"]
+        "classmap":["app/controller","app/model","app/view","app/engine"]
     }
 
 }

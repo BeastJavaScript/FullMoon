@@ -25,7 +25,6 @@ class RenderLine
     for tool in [new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective]
       @tools.push tool
 
-
   shift:()->
     @line.shift()
 

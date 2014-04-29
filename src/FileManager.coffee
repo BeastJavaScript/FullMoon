@@ -3,8 +3,6 @@ fs= require "fs"
 
 class FileManager
   constructor:(@filename,@bin,@stack)->
-    console.log "inside the file manager #{@filename}"
-
     @mr= new MegaFile([@filename])
     @tools=[]
     @needed=[]
@@ -49,9 +47,6 @@ class FileManager
 
     if (cd=new ChildDirective).canHandle(file)
       @child.push cd.getDirective(file).value
-    console.log "**************************************"
-    console.log "analysis complete for #{@filename}"
-    console.log "**************************************"
 
 
   build:(callback)->

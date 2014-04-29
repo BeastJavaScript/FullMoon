@@ -8,7 +8,7 @@ new (class RouteTest extends TestCase
 
 
   base:->
-    new PHPRouteBuilder("demo/routebuilder/route.json")
+    new PHPRouteBuilder("demo/routebuilder/routes.json")
 
   testRouteBuilder:(builder)->
     builder.export("demo/application/routes.json")

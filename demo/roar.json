@@ -1,13 +1,14 @@
 {
     "version":"0.0.0",
     "path":{
-        "route-builder":"routebuilder",
+        "routebuilder":"routebuilder",
+        "application":"application",
         "app":"application/app",
         "model":"application/app/model",
         "view":"application/app/view",
         "controller":"application/app/controller",
         "viewbuilder":"viewbuilder",
-        "view-preview":"preview",
+        "preview":"preview",
         "asset":{
             "index":"application/asset",
             "css":"application/asset/css",
@@ -16,9 +17,11 @@
         }
     },
     "view":{
-        "extention":{
-            "input":"html",
-            "output":"php"
+        "extension":{
+            "input":"html$",
+            "previewOutput":"html",
+            "output":"php",
+            "exclude":""
         },
         "include":"<?php include(\"_FILE_._EXT_\")?>",
         "variable":"<?php echo _VAR_ ?>",

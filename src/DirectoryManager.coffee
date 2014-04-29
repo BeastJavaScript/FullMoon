@@ -11,7 +11,6 @@ class DirectoryManager
 
   watchDirectory:->
     #nothing
-
   loadFiles:(directory,bin,match=null,exclude=null,loadFileFinished=null)->
     process.output.debug "getting ready to load the files"
     readDirFinished=(err, files)=>
@@ -34,6 +33,9 @@ class DirectoryManager
 
     readDirFinished=readDirFinished.bind(@)
     @dirRead.files(directory,readDirFinished)
+
+
+
 
 
   add:(file,bin)->

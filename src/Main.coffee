@@ -1,3 +1,4 @@
+#include CommandLine.coffee
 #include Directives/DirectiveLoader.coffee
 #include DirectoryManager.coffee
 #include FileManager.coffee

@@ -23,7 +23,7 @@ class RouteBuilder
       for p in param
         if p.length is 1
           p.push("[^/]+")
-        match=match.replace(new RegExp("{ ?#{p[0]}.*?}"),p[1])
+        match=match.replace(new RegExp("{ ?#{p[0]}.*?}"),"(#{p[1]})")
       route.match=match
 
   export:(file)->
