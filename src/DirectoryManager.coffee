@@ -13,6 +13,7 @@ class DirectoryManager
     @add=@add.bind(@)
     @loadFiles=@loadFiles.bind(@)
     @buildIndex=@buildIndex.bind(@)
+    @buildConcreteView=@buildConcreteView.bind(@)
 
   watchDirectory:->
     #nothing
@@ -48,9 +49,16 @@ class DirectoryManager
   buildConcreteView:(err,files)->
     process.output.debug "finished reading the directory files for creating the views"
     indexBuilt= =>
-      
-    indexBuilt=indexBuilt.bind(@)
+      afterIndexed= (file,cb)=>
+        file.export(@bin)
+        cb.call()
 
+      afterIndexed=afterIndexed.bind(@)
+      async.each(@files,afterIndexed,@buildViewFinished)
+
+    indexBuilt=indexBuilt.bind(@)
+    console.log typeof @buildIndex
+    console.log typeof indexBuilt
     async.each(files,@buildIndex,indexBuilt)
 
 

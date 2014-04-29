@@ -48,6 +48,19 @@ new (class TestDirectoryManager extends TestCase
         console.log "needed to be printed here because of async task that finished later"
         console.log TestCase.getResult()
     )
+
+
+
+  testViewBuilder:(dm)->
+
+    async.series(
+      [
+        (callback)->
+          dm.buildView("demo/viewbuilder","demo/application/app/view","html$",null,callback)
+      ]
+    )
+
+
 )
 
 {TestCase} = require "beast-test"
