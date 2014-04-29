@@ -3,6 +3,7 @@
 #include DirectoryManager.coffee
 #include FileManager.coffee
 #include RenderLine.coffee
+#include ViewBuilder.coffee
 
 
 

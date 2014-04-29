@@ -70,6 +70,14 @@
       })(this));
     };
 
+    TestDirectoryManager.prototype.testViewBuilder = function(dm) {
+      return async.series([
+        function(callback) {
+          return dm.buildView("demo/viewbuilder", "demo/application/app/view", "html$", null, callback);
+        }
+      ]);
+    };
+
     return TestDirectoryManager;
 
   })(TestCase));

@@ -1,9 +1,12 @@
+#include ViewBuilder.coffee
+#include Renderline.coffee
 fs= require "fs"
 {MegaFile}=require "mega-reader"
 
 class FileManager
   constructor:(@filename,@bin,@stack)->
     @mr= new MegaFile([@filename])
+    @mr.reset()
     @tools=[]
     @needed=[]
     @section=[]
@@ -65,6 +68,9 @@ class FileManager
       item=item.getParent()
     @renderline.render()
 
+
+  export:->
+    @vb=new ViewBuilder(@filename,@name,@bin,"php",@stack)
 
   toString:()->
     obj=
