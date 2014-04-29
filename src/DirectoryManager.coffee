@@ -6,40 +6,59 @@ class DirectoryManager
     process.output.debug "entering DirectoryManager #{Date.now()}"
     @files=[]
     @dirRead= require('node-dir')
+
+    ###
+      bindings
+    ###
     @add=@add.bind(@)
     @loadFiles=@loadFiles.bind(@)
+    @buildIndex=@buildIndex.bind(@)
 
   watchDirectory:->
     #nothing
-  loadFiles:(directory,bin,match=null,exclude=null,loadFileFinished=null)->
+
+  exclude:null
+  match:null
+
+  loadFiles:(directory,@bin,@match=null,@exclude=null,@loadFileFinished=null)->
     process.output.debug "getting ready to load the files"
-    readDirFinished=(err, files)=>
-      process.output.debug "we have finished reading the directory and now wish to process the files"
-      iterator=(file,fileProcessed)=>
-        if match is null or (new RegExp(match)).exec(file)
-          if exclude is null or (new RegExp(exclude)).exec(file) is null
-            process.output.debug("moving on to process file #{file}")
-            @add(file,bin)
-        fileProcessed.call()
+    @dirRead.files(directory,@readDirFinished)
 
-      iterator= iterator.bind(@)
+  readDirFinished:(err, files)=>
+    process.output.debug "we have finished reading the directory and now wish to process the files"
 
-      afterIterator=(file,fileBuilt)=>
-        file.build(fileBuilt)
+    afterIterator=(file,fileBuilt)=>
+      file.build(fileBuilt)
 
-      after= =>
-        async.each(@files,afterIterator,loadFileFinished);
-      async.each(files,iterator,after)
+    after= =>
+      async.each(@files,afterIterator,@loadFileFinished);
+    async.each(files,@buildIndex,after)
 
-    readDirFinished=readDirFinished.bind(@)
-    @dirRead.files(directory,readDirFinished)
+  buildIndex:(file,fileProcessed)->
+    if @match is null or (new RegExp(@match)).exec(file)
+      if @exclude is null or (new RegExp(@exclude)).exec(file) is null
+        process.output.debug("moving on to process file #{file}")
+        @add(file,@bin)
+    fileProcessed.call()
 
 
+  buildView:(directory,@bin,@match,@exclude,@buildViewFinished)->
+    @dirRead.files(directory,@buildConcreteView)
+
+  buildConcreteView:(err,files)->
+    process.output.debug "finished reading the directory files for creating the views"
+    indexBuilt= =>
+      
+    indexBuilt=indexBuilt.bind(@)
+
+    async.each(files,@buildIndex,indexBuilt)
 
 
 
   add:(file,bin)->
     fm=new FileManager(file,bin,@files)
+    for f in @files when f.name is fm.name
+      return null
     @files.push(fm)
 
 

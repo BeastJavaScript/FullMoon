@@ -408,37 +408,48 @@ class DirectoryManager
     process.output.debug "entering DirectoryManager #{Date.now()}"
     @files=[]
     @dirRead= require('node-dir')
+
+    ###
+      bindings
+    ###
     @add=@add.bind(@)
     @loadFiles=@loadFiles.bind(@)
+    @buildIndex=@buildIndex.bind(@)
 
   watchDirectory:->
     #nothing
-  loadFiles:(directory,bin,match=null,exclude=null,loadFileFinished=null)->
+
+  exclude:null
+  match:null
+
+  loadFiles:(directory,@bin,@match=null,@exclude=null,@loadFileFinished=null)->
     process.output.debug "getting ready to load the files"
-    readDirFinished=(err, files)=>
-      process.output.debug "we have finished reading the directory and now wish to process the files"
-      iterator=(file,fileProcessed)=>
-        if match is null or (new RegExp(match)).exec(file)
-          if exclude is null or (new RegExp(exclude)).exec(file) is null
-            process.output.debug("moving on to process file #{file}")
-            @add(file,bin)
-        fileProcessed.call()
+    @dirRead.files(directory,@readDirFinished)
 
-      iterator= iterator.bind(@)
 
-      afterIterator=(file,fileBuilt)=>
-        file.build(fileBuilt)
+  readDirFinished:(err, files)=>
+    process.output.debug "we have finished reading the directory and now wish to process the files"
 
-      after= =>
-        async.each(@files,afterIterator,loadFileFinished);
-      async.each(files,iterator,after)
 
-    readDirFinished=readDirFinished.bind(@)
-    @dirRead.files(directory,readDirFinished)
+    afterIterator=(file,fileBuilt)=>
+      file.build(fileBuilt)
+
+    after= =>
+      async.each(@files,afterIterator,@loadFileFinished);
+    async.each(files,@buildIndex,after)
+
+  buildIndex:(file,fileProcessed)->
+    if @match is null or (new RegExp(@match)).exec(file)
+      if @exclude is null or (new RegExp(@exclude)).exec(file) is null
+        process.output.debug("moving on to process file #{file}")
+        @add(file,@bin)
+    fileProcessed.call()
 
 
   add:(file,bin)->
     fm=new FileManager(file,bin,@files)
+    for f in @files when f.name is fm.name
+      return null
     @files.push(fm)
 
 

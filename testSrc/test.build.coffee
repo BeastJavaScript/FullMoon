@@ -35,7 +35,6 @@ new (class TestDirectoryManager extends TestCase
             process.output.debug "allfiledloadedandparse has been called"
             callback.call()
             process.output.debug "all files loaded and parsed"
-
           dm.loadFiles("demo/viewbuilder","demo/preview","html$","^(node_modules|\\.)",allFileLoadedandParsed)
       ,
         (callback)=>

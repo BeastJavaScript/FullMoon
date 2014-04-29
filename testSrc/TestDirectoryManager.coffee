@@ -18,7 +18,6 @@ new (class TestDirectoryManager extends TestCase
             process.output.debug "allfiledloadedandparse has been called"
             callback.call()
             process.output.debug "all files loaded and parsed"
-
           dm.loadFiles("demo/viewbuilder","demo/preview","html$","^(node_modules|\\.)",allFileLoadedandParsed)
       ,
         (callback)=>
@@ -32,4 +31,17 @@ new (class TestDirectoryManager extends TestCase
         console.log "needed to be printed here because of async task that finished later"
         console.log TestCase.getResult()
     )
+
+
+
+  testViewBuilder:(dm)->
+
+    async.series(
+      [
+        (callback)->
+          dm.buildView("demo/viewbuilder","demo/application/app/view","html$",null,callback)
+      ]
+    )
+
+
 )
