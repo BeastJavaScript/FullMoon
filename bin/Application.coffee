@@ -229,11 +229,11 @@ class ViewBuilder
         break
 
   print:(line)->
-    if (t=@canHandle(line))
+    t=@canHandle(line)
+    if t
       if t instanceof NeedDirective
-        line= "<?php include('#{@file()}') ?>"
-    console.log line
-    fs.appendFileSync(@filename,line)
+        line= "<?php include('#{t.getDirective(line).value}.#{@ext}') ?>"
+    fs.appendFileSync(@file(),"#{line}\n")
 
 
   canHandle:(line)->
@@ -662,7 +662,6 @@ class DirectoryManager
     console.log typeof @buildIndex
     console.log typeof indexBuilt
     async.each(files,@buildIndex,indexBuilt)
-
 
 
   add:(file,bin)->

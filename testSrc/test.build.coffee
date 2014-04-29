@@ -50,9 +50,7 @@ new (class TestDirectoryManager extends TestCase
     )
 
 
-
   testViewBuilder:(dm)->
-
     async.series(
       [
         (callback)->

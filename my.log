@@ -1,2 +1,197 @@
-[Tue Apr 29 2014 06:31:21 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398767481519
-[Tue Apr 29 2014 06:31:21 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398767481529
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398812145090
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398812145094
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398812145095
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG starting to load directory
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG getting ready to load the files
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398812145095
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398812145095
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398812145095
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG we have finished reading the directory and now wish to process the files
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG building renderline
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG renderline home created
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #name main-layout
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG <!doctype html>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG <html lang="en-US">
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG <head>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG     <meta charset="UTF-8">
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG     <title></title>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG </head>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG <body>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #need menu
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #name menu
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG <nav>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG     <ul>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Home</li>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Contact</li>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>About</li>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG     </ul>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTMENU.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG </nav>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #child page
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG {"key":"#child","value":"page"}
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 4,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 4,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #render
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #parent main-layout
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #name home
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #repeat 4
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #section page
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 3,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #render
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #parent main-layout
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #name home
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #repeat 4
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #section page
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 2,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #render
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #parent main-layout
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #name home
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #repeat 4
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #section page
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG </body>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG </html>
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG allfiledloadedandparse has been called
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG { fileManager: undefined,
+  readDirFinished: [Function],
+  files: 
+   [ { filename: 'demo\\viewbuilder\\TESTCHILD.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [],
+       section: [Object],
+       child: [],
+       render: true,
+       repeat: '4',
+       parent: 'main-layout',
+       name: 'home',
+       renderline: [Object] },
+     { filename: 'demo\\viewbuilder\\TESTLAYOUT.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [Object],
+       section: [],
+       child: [Object],
+       name: 'main-layout' },
+     { filename: 'demo\\viewbuilder\\TESTMENU.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [],
+       section: [],
+       child: [],
+       name: 'menu' } ],
+  dirRead: 
+   { files: [Function: files],
+     paths: [Function: paths],
+     subdirs: [Function: subdirs],
+     readFiles: [Function: readFiles] },
+  add: [Function],
+  loadFiles: [Function],
+  buildIndex: [Function],
+  buildConcreteView: [Function],
+  bin: 'demo/preview',
+  match: 'html$',
+  exclude: '^(node_modules|\\.)',
+  loadFileFinished: [Function] }
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG all files loaded and parsed
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG finished reading the directory files for creating the views
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\TESTCHILD.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\TESTLAYOUT.html
+[Tue Apr 29 2014 18:55:45 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\TESTMENU.html
