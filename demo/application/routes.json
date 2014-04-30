@@ -1,6 +1,13 @@
 {
   "routes": [
     {
+      "name": "home",
+      "controller": "HomeController",
+      "method": "home",
+      "url": "/",
+      "match": "/"
+    },
+    {
       "name": "profile",
       "controller": "UserController",
       "method": "profile",

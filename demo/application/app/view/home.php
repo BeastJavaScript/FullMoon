@@ -7,8 +7,9 @@
   $last->parent=ob_get_clean();
   $last->sections=[];
 ?>
+
 <?php ob_start();?>
-This is the main page being typed into
+<div>Welcome to beast homepage</div>
 <?php
   $section_buffer=ob_get_clean();
   $last->sections['page']=$section_buffer

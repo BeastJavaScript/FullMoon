@@ -1,143 +1,80 @@
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398844740885
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG getting ready to load the files
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398844740892
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG we have finished reading the directory and now wish to process the files
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG building renderline
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG renderline home created
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #name main-layout
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG <!doctype html>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG <html lang="en-US">
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG <head>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG     <meta charset="UTF-8">
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG     <title></title>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG </head>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG <body>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #need menu
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #name menu
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG <nav>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG     <ul>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Home</li>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Contact</li>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>About</li>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG     </ul>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG </nav>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #child page
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG {"key":"#child","value":"page"}
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 4,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 4,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #render
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #parent main-layout
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #name home
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #repeat 4
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #section page
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 3,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #render
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #parent main-layout
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #name home
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #repeat 4
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #section page
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 2,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #render
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #parent main-layout
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #name home
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #repeat 4
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #section page
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG This is the main page being typed into
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG </body>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG </html>
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG finished reading the directory files for creating the views
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\FullMoon\demo\viewbuilder\TESTCHILD.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\FullMoon\demo\viewbuilder\TESTLAYOUT.html
-[Wed Apr 30 2014 03:59:00 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\FullMoon\demo\viewbuilder\TESTMENU.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398892251563
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG getting ready to load the files
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398892251583
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG we have finished reading the directory and now wish to process the files
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\home.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG building renderline
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG renderline home created
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #name main-layout
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <!doctype html>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <html lang="en-US">
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <head>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     <meta charset="UTF-8">
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     <title></title>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </head>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <body>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #need menu
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #name menu
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <nav>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     <ul>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Home</li>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Contact</li>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>About</li>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     </ul>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </nav>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #child page
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG {"key":"#child","value":"page"}
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\home.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <div>Welcome to beast homepage</div>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\home.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </body>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </html>
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG finished reading the directory files for creating the views
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\baselayout.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\home.html
+[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\menu.html

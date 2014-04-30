@@ -14,7 +14,8 @@ foreach($config->routes as $route){
         array_shift($match);
         $classname=$route->controller;
         $controller=new $classname;
-        call_user_func_array(array($controller,$route->method),$match);
+        $content=call_user_func_array(array($controller,$route->method),$match);
+        echo $content;
     }
 }
 if(!$hasUrl){
