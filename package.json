@@ -33,7 +33,7 @@
 
     "build-command-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.command.coffee testSrc/CommandLineTest.coffee",
     "build-command-test":"node node_modules/coffee-script/bin/coffee -c -o test -j commandtest.js testSrc/CommandLineTest.coffee",
-    "command-test-run":"node test/commandline.js -c demo/roar.json -p -r",
+    "command-test-run":"node test/commandline.js -c demo/roar.json -p -r -v",
     "command-test":"npm run-script build-application && npm run-script build-command-sugar && npm run-script build-command-test && npm run-script command-test-run"
   },
   "repository": {

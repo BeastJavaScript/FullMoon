@@ -57,8 +57,6 @@ class DirectoryManager
       async.each(@files,afterIndexed,@buildViewFinished)
 
     indexBuilt=indexBuilt.bind(@)
-    console.log typeof @buildIndex
-    console.log typeof indexBuilt
     async.each(files,@buildIndex,indexBuilt)
 
 

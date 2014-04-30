@@ -221,11 +221,25 @@ class ViewBuilder
     unless fs.existsSync(@bin)
       mkdirp(@bin)
     fs.writeFileSync(@file(),"");
-
+    @print("<?php ini_set('error_reporting', 0);?>")
     while true
       if @mr.hasNextLine()
         @print(@mr.getNextLine())
       else
+        @print(
+              """
+               <?php
+               if(isset($renderstack) && count($renderstack)>0){
+                  $last=&array_pop($renderstack);
+                  foreach($last->sections as $key=>$value){
+                    $last->parent=str_replace("#child ".$key, $value, $last->parent);
+                  }
+               }
+                echo $last->parent;
+                unset($last)
+               ?>
+              """
+        )
         break
 
   print:(line)->
@@ -233,6 +247,37 @@ class ViewBuilder
     if t
       if t instanceof NeedDirective
         line= "<?php include('#{t.getDirective(line).value}.#{@ext}') ?>"
+      if t instanceof RenderDirective or t instanceof RepeatDirective or t instanceof NameDirective
+        line=""
+        return
+      if t instanceof ParentDirective
+        parentname= t.getDirective(line).value
+        line="""
+            <?php
+              $renderstack[]= new stdClass();
+              ob_start();
+              include("#{parentname}.#{@ext}");
+              $last=&$renderstack[count($renderstack)-1];
+              $last->parent=ob_get_clean();
+              $last->sections=[];
+            ?>
+            """
+
+      if t instanceof SectionDirective
+        @sectionName= t.getDirective(line).value
+        line= """
+              <?php ob_start();?>
+              """
+      if t instanceof StopDirective
+        sectionName=@sectionName
+        delete @sectionName
+        line= """
+              <?php
+                $section_buffer=ob_get_clean();
+                $last->sections['#{sectionName}']=$section_buffer
+              ?>
+              """
+
     fs.appendFileSync(@file(),"#{line}\n")
 
 
@@ -659,8 +704,6 @@ class DirectoryManager
       async.each(@files,afterIndexed,@buildViewFinished)
 
     indexBuilt=indexBuilt.bind(@)
-    console.log typeof @buildIndex
-    console.log typeof indexBuilt
     async.each(files,@buildIndex,indexBuilt)
 
 
@@ -688,6 +731,7 @@ class CommandLine
     .option("-c, --config [value]","This is the path to the roar.json file with the configuration")
     .option("-r, --route","Build the route file from the route.json in the routebuilder location")
     .option("-p, --preview","Flag used to build preview file")
+    .option("-v, --viewbuild","Flag used to build preview file")
     .parse(args)
 
     @program.config ?= "roar.json"
@@ -705,6 +749,10 @@ class CommandLine
 
     if program.route
       @routeBuilder()
+
+
+    if program.viewbuild
+      @viewBuild()
 
 
   config:null
@@ -732,6 +780,28 @@ class CommandLine
 
     route=new PHPRouteBuilder(routebuilder)
     route.export(exportdir)
+
+
+  viewBuild:->
+    dm= new DirectoryManager()
+    program=@program
+    basedir=@basedir
+    config= @config
+
+
+    match=config.view.extension.match
+    if match is ""
+      match=null
+
+    exclude=config.view.extension.exclude
+    if exclude is ""
+      exclude=null
+
+    viewbuilder=path.resolve basedir,config.path.viewbuilder
+    viewpath= path.resolve basedir,config.path.view
+
+    dm.buildView(viewbuilder,viewpath,match,exclude,->)
+
 
 
 

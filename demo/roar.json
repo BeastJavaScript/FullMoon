@@ -19,6 +19,7 @@
     "view":{
         "extension":{
             "input":"html$",
+            "match":"html$",
             "previewOutput":"html",
             "output":"php",
             "exclude":""

@@ -10,6 +10,7 @@ class CommandLine
     .option("-c, --config [value]","This is the path to the roar.json file with the configuration")
     .option("-r, --route","Build the route file from the route.json in the routebuilder location")
     .option("-p, --preview","Flag used to build preview file")
+    .option("-v, --viewbuild","Flag used to build preview file")
     .parse(args)
 
     @program.config ?= "roar.json"
@@ -27,6 +28,10 @@ class CommandLine
 
     if program.route
       @routeBuilder()
+
+
+    if program.viewbuild
+      @viewBuild()
 
 
   config:null
@@ -54,6 +59,28 @@ class CommandLine
 
     route=new PHPRouteBuilder(routebuilder)
     route.export(exportdir)
+
+
+  viewBuild:->
+    dm= new DirectoryManager()
+    program=@program
+    basedir=@basedir
+    config= @config
+
+
+    match=config.view.extension.match
+    if match is ""
+      match=null
+
+    exclude=config.view.extension.exclude
+    if exclude is ""
+      exclude=null
+
+    viewbuilder=path.resolve basedir,config.path.viewbuilder
+    viewpath= path.resolve basedir,config.path.view
+
+    dm.buildView(viewbuilder,viewpath,match,exclude,->)
+
 
 
 
