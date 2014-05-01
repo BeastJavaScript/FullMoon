@@ -5,6 +5,7 @@
 #include TestRepeatDirective.coffee
 #include TestSectionDirective.coffee
 #include TestDirectoryManager.coffee
+#include PlaceholderTest.coffee
 
 
 #include RouteTest.coffee

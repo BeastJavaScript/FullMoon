@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <head>
+<?php include('style.php') ?>
+    </head>
 </head>
 <body>
 <?php include('menu.php') ?>

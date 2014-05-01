@@ -1,4 +1,5 @@
 #include Directives/DirectiveLoader.coffee
+#include Variables/PlaceholderLoader.coffee
 
 path= require "path"
 mkdirp= require "mkdirp"
@@ -71,8 +72,11 @@ class ViewBuilder
                 $last->sections['#{sectionName}']=$section_buffer
               ?>
               """
+      if t instanceof Variable or t instanceof CallableFunction or t instanceof If or t instanceof EndIf or t instanceof ForEach or t instanceof EndForEach or t instanceof Asset
+        line= t.getReplacement line
 
-    fs.appendFileSync(@file(),"#{line}\n")
+
+    fs.appendFileSync(@file(),"#{line}#{os.EOL}")
 
 
   canHandle:(line)->
@@ -84,7 +88,7 @@ class ViewBuilder
 
 
   buildtools:->
-    for tool in [new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective]
+    for tool in [new Asset,new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective,new CallableFunction,new Variable,new If,new EndIf]
       @tools.push tool
 
 

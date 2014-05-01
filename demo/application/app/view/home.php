@@ -9,7 +9,11 @@
 ?>
 
 <?php ob_start();?>
-<div>Welcome to beast homepage</div>
+
+<?php if($user): ?>
+<div>Welcome to beast homepage, <?php echo $user ?></div>
+<?php endif; ?>
+<div>Welcome to beast homepage, <?php echo strtolower("Shavuahn Gabay") ?></div>
 <?php
   $section_buffer=ob_get_clean();
   $last->sections['page']=$section_buffer

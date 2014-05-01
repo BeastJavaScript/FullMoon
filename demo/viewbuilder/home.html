@@ -1,8 +1,12 @@
 #render
 #parent main-layout
 #name home
-#repeat 1
+#repeat 1f
 
 #section page
-<div>Welcome to beast homepage</div>
+
+@if($user)
+<div>Welcome to beast homepage, {{user Shavauhn Gabay}}</div>
+@endif
+<div>Welcome to beast homepage, {{exec*strtolower("Shavuahn Gabay")* This is the world}}</div>
 #stop

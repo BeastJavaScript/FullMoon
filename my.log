@@ -1,80 +1,181 @@
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398892251563
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG getting ready to load the files
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398892251583
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG we have finished reading the directory and now wish to process the files
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\home.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG building renderline
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG renderline home created
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #name main-layout
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <!doctype html>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <html lang="en-US">
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <head>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     <meta charset="UTF-8">
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     <title></title>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </head>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <body>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #need menu
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #name menu
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <nav>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     <ul>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Home</li>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Contact</li>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>About</li>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG     </ul>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\menu.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </nav>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #child page
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG {"key":"#child","value":"page"}
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\home.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG <div>Welcome to beast homepage</div>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\home.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </body>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG 1,c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG </html>
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG finished reading the directory files for creating the views
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\baselayout.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\home.html
-[Wed Apr 30 2014 17:10:51 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:29 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398983009963
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398983010037
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398983010037
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG starting to load directory
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG getting ready to load the files
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398983010039
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398983010039
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1398983010039
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG we have finished reading the directory and now wish to process the files
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\style.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG building renderline
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG renderline home created
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG #name main-layout
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <!doctype html>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <html lang="en-US">
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <head>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     <meta charset="UTF-8">
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     <title></title>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     <head>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     #need style
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\style.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG #name style
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\style.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <link rel="stylesheet" href="{{asset*style/stylesheets/screen.css*}}"/>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\style.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <link rel="stylesheet" href="{{asset*style/stylesheets/ie.css*}}"/>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\style.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <link rel="stylesheet" href="{{asset*style/stylesheets/print.css*}}"/>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\style.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     </head>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG </head>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <body>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG #need menu
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG #name menu
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <nav>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     <ul>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Home</li>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>Contact</li>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG         <li>About</li>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG     </ul>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG </nav>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG #child page
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG {"key":"#child","value":"page"}
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG @if($user)
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <div>Welcome to beast homepage, {{user Shavauhn Gabay}}</div>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG @endif
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG <div>Welcome to beast homepage, {{exec*strtolower("Shavuahn Gabay")* This is the world}}</div>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG #stop
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG </body>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG --------------------------------
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG 1,demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG </html>
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG allfiledloadedandparse has been called
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG { fileManager: undefined,
+  readDirFinished: [Function],
+  files: 
+   [ { filename: 'demo\\viewbuilder\\baselayout.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [Object],
+       section: [],
+       child: [Object],
+       name: 'main-layout' },
+     { filename: 'demo\\viewbuilder\\home.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [],
+       section: [Object],
+       child: [],
+       render: true,
+       repeat: '1',
+       parent: 'main-layout',
+       name: 'home',
+       renderline: [Object] },
+     { filename: 'demo\\viewbuilder\\menu.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [],
+       section: [],
+       child: [],
+       name: 'menu' },
+     { filename: 'demo\\viewbuilder\\style.html',
+       bin: 'demo/preview',
+       stack: [Circular],
+       mr: [Object],
+       tools: [Object],
+       needed: [],
+       section: [],
+       child: [],
+       name: 'style' } ],
+  dirRead: 
+   { files: [Function: files],
+     paths: [Function: paths],
+     subdirs: [Function: subdirs],
+     readFiles: [Function: readFiles] },
+  add: [Function],
+  loadFiles: [Function],
+  buildIndex: [Function],
+  buildConcreteView: [Function],
+  bin: 'demo/preview',
+  match: 'html$',
+  exclude: '^(node_modules|\\.)',
+  loadFileFinished: [Function] }
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG all files loaded and parsed
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG finished reading the directory files for creating the views
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\baselayout.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\home.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\menu.html
+[Thu May 01 2014 18:23:30 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file demo\viewbuilder\style.html

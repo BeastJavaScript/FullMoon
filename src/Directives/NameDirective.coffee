@@ -2,6 +2,6 @@
 
 class NameDirective extends Directive
   constructor:->
-    super("name","[^\s\r\n]+")
+    super("name","[^ \r\n]+")
 
 exports.NameDirective=NameDirective

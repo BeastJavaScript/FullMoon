@@ -30,6 +30,7 @@ class FileManager
 
   analyze:->
     file=fs.readFileSync(@filename,{encoding:"utf8"})
+
     if (new RenderDirective).canHandle(file)
       @render=true
 

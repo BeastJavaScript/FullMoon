@@ -2,6 +2,6 @@
 
 class ParentDirective extends Directive
 	constructor:->
-		super("parent","[^\s\r\n]+")
+		super("parent","[^ \r\n]+")
 
 exports.ParentDirective=ParentDirective

@@ -6,6 +6,9 @@
 #include ViewBuilder.coffee
 
 
+#include Variables/PlaceholderLoader.coffee
+
+
 
 #include Route/RouteLoader.coffee
 

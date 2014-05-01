@@ -62,6 +62,99 @@ exports.PHPRouteBuilder=PHPRouteBuilder
 
 
 
+
+
+
+
+
+
+
+class Placeholder
+  constructor:(@match,@replacement,@preview)->
+    @static=@constructor
+    @static.regex ?= new RegExp(@match)
+    @static.regexR ?= new RegExp(@match,"g")
+
+  canHandle:(text)->
+    @static.regex.exec(text) isnt null;
+
+  getReplacement:(text)->
+    text.replace(@static.regexR,@replacement,text)
+
+
+  getPreviewReplacement:(text)->
+    text.replace(@static.regexR,@preview,text)
+
+
+
+exports.Placeholder=Placeholder
+
+
+class Asset extends Placeholder
+  constructor:->
+    super("{{ *?asset[*](.*?)[*] *?}}","<?php echo assets(\"$1\") ?>","../application/assets/$1")
+
+exports.Asset=Asset
+
+class EndForEach extends Placeholder
+  constructor:->
+    super("@endforeach","<?php endforeach; ?>","")
+
+exports.EndForEach=EndForEach
+
+class ForEach extends Placeholder
+  constructor:->
+    super("@foreach\\((.*)\\)","<?php foreach$1: ?>","")
+
+exports.ForEach=ForEach
+
+class EndIf extends Placeholder
+  constructor:->
+    super("@endif","<?php endif; ?>","")
+
+exports.EndIf=EndIf
+
+class If extends Placeholder
+  constructor:->
+    super("@if\\((.+)\\)","<?php if($1): ?>","")
+
+exports.If=If
+
+class CallableFunction extends Placeholder
+  constructor:->
+    super("{{exec\\*(.*)\\* ?([^}]*)}}","<?php echo $1 ?>","$2")
+
+exports.Variable=Variable
+
+class Variable extends Placeholder
+  constructor:->
+    super("{{ ?([^@ ]+) ?([^}]*?)}}","<?php echo $$$1 ?>","$2")
+
+exports.Variable=Variable
+
+class Placeholder
+  constructor:(@match,@replacement,@preview)->
+    @static=@constructor
+    @static.regex ?= new RegExp(@match)
+    @static.regexR ?= new RegExp(@match,"g")
+
+  canHandle:(text)->
+    @static.regex.exec(text) isnt null;
+
+  getReplacement:(text)->
+    text.replace(@static.regexR,@replacement,text)
+
+
+  getPreviewReplacement:(text)->
+    text.replace(@static.regexR,@preview,text)
+
+
+
+exports.Placeholder=Placeholder
+
+
+
+
 fs=require "fs"
 {MegaFile}= require "mega-reader"
 async= require "async"
@@ -84,7 +177,7 @@ class RenderLine
       @readers.push(new MegaFile([file.filename]))
 
   buildtools:->
-    for tool in [new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective]
+    for tool in [new Asset,new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective,new CallableFunction,new Variable,new If,new EndIf,new ForEach,new EndForEach]
       @tools.push tool
 
   shift:()->
@@ -137,6 +230,8 @@ class RenderLine
           @printNeed(file,directive.getDirective(line).value)
         else if directive instanceof StopDirective
            stop=true
+        else if directive instanceof Asset or directive instanceof Variable or directive instanceof CallableFunction or directive instanceof If or directive instanceof EndIf or directive instanceof ForEach  or directive instanceof EndForEach
+            fs.writeSync(file,"#{directive.getPreviewReplacement(line)}#{os.EOL}    ")
 
       if reader.hasNextLine()
         unless stop
@@ -202,6 +297,7 @@ class RenderLine
 
 
 exports.RenderLine=RenderLine
+
 
 
 
@@ -277,8 +373,11 @@ class ViewBuilder
                 $last->sections['#{sectionName}']=$section_buffer
               ?>
               """
+      if t instanceof Variable or t instanceof CallableFunction or t instanceof If or t instanceof EndIf or t instanceof ForEach or t instanceof EndForEach or t instanceof Asset
+        line= t.getReplacement line
 
-    fs.appendFileSync(@file(),"#{line}\n")
+
+    fs.appendFileSync(@file(),"#{line}#{os.EOL}")
 
 
   canHandle:(line)->
@@ -290,7 +389,7 @@ class ViewBuilder
 
 
   buildtools:->
-    for tool in [new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective]
+    for tool in [new Asset,new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective,new CallableFunction,new Variable,new If,new EndIf]
       @tools.push tool
 
 
@@ -331,6 +430,7 @@ class FileManager
 
   analyze:->
     file=fs.readFileSync(@filename,{encoding:"utf8"})
+
     if (new RenderDirective).canHandle(file)
       @render=true
 
@@ -454,14 +554,14 @@ exports.StopDirective=StopDirective
 
 class ChildDirective extends Directive
   constructor:->
-    super("child","[^\s\r\n]+")
+    super("child","[^ \r\n]+")
 
 exports.ChildDirective=ChildDirective
 
 
 class NameDirective extends Directive
   constructor:->
-    super("name","[^\s\r\n]+")
+    super("name","[^ \r\n]+")
 
 exports.NameDirective=NameDirective
 
@@ -475,7 +575,7 @@ exports.RenderDirective=RenderDirective
 
 class SectionDirective extends Directive
   constructor:->
-    super("section","[^\s\r\n]+")
+    super("section","[^ \r\n]+")
 
 exports.SectionDirective=SectionDirective
 
@@ -489,16 +589,17 @@ exports.RepeatDirective=RepeatDirective
 
 class ParentDirective extends Directive
 	constructor:->
-		super("parent","[^\s\r\n]+")
+		super("parent","[^ \r\n]+")
 
 exports.ParentDirective=ParentDirective
 
 
 class NeedDirective extends Directive
 	constructor:->
-		super("need","[^\s\r\n]+")
+		super("need","[^ \r\n]+")
 
 exports.NeedDirective=NeedDirective
+
 
 
 
@@ -525,7 +626,7 @@ class RenderLine
       @readers.push(new MegaFile([file.filename]))
 
   buildtools:->
-    for tool in [new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective]
+    for tool in [new Asset,new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective,new CallableFunction,new Variable,new If,new EndIf,new ForEach,new EndForEach]
       @tools.push tool
 
   shift:()->
@@ -578,6 +679,8 @@ class RenderLine
           @printNeed(file,directive.getDirective(line).value)
         else if directive instanceof StopDirective
            stop=true
+        else if directive instanceof Asset or directive instanceof Variable or directive instanceof CallableFunction or directive instanceof If or directive instanceof EndIf or directive instanceof ForEach  or directive instanceof EndForEach
+            fs.writeSync(file,"#{directive.getPreviewReplacement(line)}#{os.EOL}    ")
 
       if reader.hasNextLine()
         unless stop
@@ -811,6 +914,9 @@ class CommandLine
     CommandLine.interface
 
 exports.CommandLine=CommandLine
+
+
+
 
 
 

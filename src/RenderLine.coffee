@@ -1,4 +1,5 @@
 #include Directives/DirectiveLoader.coffee
+#include Variables/PlaceholderLoader.coffee
 
 fs=require "fs"
 {MegaFile}= require "mega-reader"
@@ -22,7 +23,7 @@ class RenderLine
       @readers.push(new MegaFile([file.filename]))
 
   buildtools:->
-    for tool in [new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective]
+    for tool in [new Asset,new NeedDirective,new ParentDirective,new RepeatDirective,new SectionDirective,new NameDirective,new ChildDirective,new RenderDirective,new StopDirective,new CallableFunction,new Variable,new If,new EndIf,new ForEach,new EndForEach]
       @tools.push tool
 
   shift:()->
@@ -75,6 +76,8 @@ class RenderLine
           @printNeed(file,directive.getDirective(line).value)
         else if directive instanceof StopDirective
            stop=true
+        else if directive instanceof Asset or directive instanceof Variable or directive instanceof CallableFunction or directive instanceof If or directive instanceof EndIf or directive instanceof ForEach  or directive instanceof EndForEach
+            fs.writeSync(file,"#{directive.getPreviewReplacement(line)}#{os.EOL}    ")
 
       if reader.hasNextLine()
         unless stop

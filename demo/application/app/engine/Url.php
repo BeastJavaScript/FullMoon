@@ -10,8 +10,10 @@ class Url{
     }
 
     function load(){
+        global $basedir;
         $this->request_uri=strtolower($_SERVER["REQUEST_URI"]);
         $this->request_uri=preg_replace("~/$~","",$this->request_uri);
+        $this->request_uri=preg_replace("~^$basedir~","",$this->request_uri);
         if($this->request_uri === ""){
             $this->request_uri="/";
         }

@@ -17,6 +17,12 @@
             "controller":"UserController",
             "method":"settings",
             "url":"/user/{username}/settings/{id [0-9]+}"
+        },
+        {
+            "name":"resources",
+            "controller":"UserController",
+            "method":"file",
+            "url":"/file"
         }
     ]
 }
