@@ -1,8 +1,11 @@
 {
-  "name": "fullmoon",
+  "name": "beast-roar",
   "version": "0.0.1",
   "description": "This is a Framework that can help to generate views for your applications",
-  "main": "lib/commandline.js",
+  "bin":{
+      "purr":"lib/commandline.js"
+  },
+  "main": "lib/Application.js",
   "dependencies": {
     "async": "~0.7.0",
     "beast-trigger": "~0.0.2",
