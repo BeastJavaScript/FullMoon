@@ -1,12 +1,12 @@
 {
   "name": "fullmoon",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This is a Framework that can help to generate views for your applications",
-  "main": "lib/fullmoon.min.js",
+  "main": "lib/commandline.js",
   "dependencies": {
     "async": "~0.7.0",
     "beast-trigger": "~0.0.2",
-    "uglifyjs": "*",
+    "minify": "*",
     "commander": "~2.2.0",
     "chokidar": "*",
     "node-dir": "*",
@@ -25,7 +25,7 @@
     "build-application":"npm run-script build-sugar && npm run-script build-coffee",
 
 
-    
+
     "build-test-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.build.coffee testSrc/MainTest.coffee",
     "build-test-coffee":"node node_modules/coffee-script/bin/coffee -o test testSrc/test.build.coffee  && mv test/test.build.js test/test.js",
     "run-test":"npm run-script build-sugar && npm run-script build-coffee && npm run-script build-test-sugar && npm run-script build-test-coffee && echo 'running test' && node test/test.js",
@@ -33,6 +33,7 @@
 
     "build-command-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.command.coffee testSrc/CommandLineTest.coffee",
     "build-command-test":"node node_modules/coffee-script/bin/coffee -c -o test -j commandtest.js testSrc/CommandLineTest.coffee",
+    "min":"node node_modules/minify/bin/minify test/commandline.js test/commandtest.js > lib/commandtest.js",
     "command-test-run":"node test/commandline.js -c demo/roar.json -p -r -v",
     "command-test":"npm run-script build-application && npm run-script build-command-sugar && npm run-script build-command-test && npm run-script command-test-run"
   },
