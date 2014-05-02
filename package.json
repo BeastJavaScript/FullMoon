@@ -2,8 +2,8 @@
   "name": "beast-roar",
   "version": "0.0.1",
   "description": "This is a Framework that can help to generate views for your applications",
-  "bin":{
-      "purr":"lib/commandline.js"
+  "bin": {
+    "purr": "lib/commandline.js"
   },
   "main": "lib/Application.js",
   "dependencies": {
@@ -13,7 +13,8 @@
     "commander": "~2.2.0",
     "chokidar": "*",
     "node-dir": "*",
-    "mega-reader": "*"
+    "mega-reader": "*",
+    "fs-extra": "*"
   },
   "devDependencies": {
     "coffee-stir": "~0.0.31",
@@ -22,23 +23,17 @@
   },
   "scripts": {
     "test": "npm run-script run-test",
-    "build-sugar":"node node_modules/coffee-stir/bin/cli.js -o bin/Application.coffee src/Main.coffee",
-    "build-coffee":"node node_modules/coffee-script/bin/coffee -c -o lib/ bin/Application.coffee",
-
-    "build-application":"npm run-script build-sugar && npm run-script build-coffee",
-
-
-
-    "build-test-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.build.coffee testSrc/MainTest.coffee",
-    "build-test-coffee":"node node_modules/coffee-script/bin/coffee -o test testSrc/test.build.coffee  && mv test/test.build.js test/test.js",
-    "run-test":"npm run-script build-sugar && npm run-script build-coffee && npm run-script build-test-sugar && npm run-script build-test-coffee && echo 'running test' && node test/test.js",
-
-
-    "build-command-sugar":"node node_modules/coffee-stir/bin/cli.js -o testSrc/test.command.coffee testSrc/CommandLineTest.coffee",
-    "build-command-test":"node node_modules/coffee-script/bin/coffee -c -o test -j commandtest.js testSrc/CommandLineTest.coffee",
-    "min":"node node_modules/minify/bin/minify test/commandline.js test/commandtest.js > lib/commandtest.js",
-    "command-test-run":"node test/commandline.js -c demo/roar.json -p -r -v",
-    "command-test":"npm run-script build-application && npm run-script build-command-sugar && npm run-script build-command-test && npm run-script command-test-run"
+    "build-sugar": "node node_modules/coffee-stir/bin/cli.js -o bin/Application.coffee src/Main.coffee",
+    "build-coffee": "node node_modules/coffee-script/bin/coffee -c -o lib/ bin/Application.coffee",
+    "build-application": "npm run-script build-sugar && npm run-script build-coffee",
+    "build-test-sugar": "node node_modules/coffee-stir/bin/cli.js -o testSrc/test.build.coffee testSrc/MainTest.coffee",
+    "build-test-coffee": "node node_modules/coffee-script/bin/coffee -o test testSrc/test.build.coffee  && mv test/test.build.js test/test.js",
+    "run-test": "npm run-script build-sugar && npm run-script build-coffee && npm run-script build-test-sugar && npm run-script build-test-coffee && echo 'running test' && node test/test.js",
+    "build-command-sugar": "node node_modules/coffee-stir/bin/cli.js -o testSrc/test.command.coffee testSrc/CommandLineTest.coffee",
+    "build-command-test": "node node_modules/coffee-script/bin/coffee -c -o test -j commandtest.js testSrc/CommandLineTest.coffee",
+    "min": "node node_modules/minify/bin/minify test/commandline.js test/commandtest.js > lib/commandtest.js",
+    "command-test-run": "node test/commandline.js -c demo/roar.json -p -r -v",
+    "command-test": "npm run-script build-application && npm run-script build-command-sugar && npm run-script build-command-test && npm run-script command-test-run"
   },
   "repository": {
     "type": "git",
@@ -58,5 +53,8 @@
     "beast-test"
   ],
   "author": "Shavauhn Gabay",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  }
 }

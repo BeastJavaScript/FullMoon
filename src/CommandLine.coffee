@@ -13,6 +13,11 @@ class CommandLine
     .option("-v, --viewbuild","Flag used to build preview file")
     .parse(args)
 
+    if @program.args[0] is "generate"
+      `debugger`
+      @generate()
+      process.exit(0)
+
     @program.config ?= "roar.json"
     @basedir=path.resolve(path.dirname(@program.config))
     if fs.existsSync(@program.config)
@@ -82,7 +87,13 @@ class CommandLine
     dm.buildView(viewbuilder,viewpath,match,exclude,->)
 
 
-
+  generate:->
+    dcopy=require("d-copy").DirectoryCopy
+    base=path.resolve(__dirname,"../demo")
+    dest=path.resolve(process.cwd(),"fools");
+    `debugger`
+    d= new dcopy(base,dest,true);
+    d.getFiles()
 
   @getInstance:->
     if typeof CommandLine.interface is "undefined"

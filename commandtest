@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+npm test
+node $(dirname $0)/test/commandline.js generate
