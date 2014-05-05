@@ -1,5 +1,5 @@
 {TestCase}= require "beast-test"
-{Variable}= require "../lib/Application.js"
+{Variable}= require "../bin/index.js"
 
 new (class PlaceholderTest extends TestCase
   constructor:->

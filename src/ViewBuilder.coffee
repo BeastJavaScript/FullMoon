@@ -6,6 +6,7 @@ mkdirp= require "mkdirp"
 {MegaFile}= require "mega-reader"
 class ViewBuilder
   constructor:(@filename,@name,@bin,@ext,@stack)->
+    @endRender=false;
     @mr= new MegaFile([@filename])
     @mr.reset()
     @tools=[]
@@ -16,25 +17,32 @@ class ViewBuilder
     unless fs.existsSync(@bin)
       mkdirp(@bin)
     fs.writeFileSync(@file(),"");
-    @print("<?php ini_set('error_reporting', 0);?>")
+    @print("<?php //ini_set('error_reporting', 0);?>")
     while true
       if @mr.hasNextLine()
         @print(@mr.getNextLine())
-      else
+      else if @endRender
+        @endRender=false
         @print(
               """
                <?php
                if(isset($renderstack) && count($renderstack)>0){
                   $last=&array_pop($renderstack);
-                  foreach($last->sections as $key=>$value){
-                    $last->parent=str_replace("#child ".$key, $value, $last->parent);
-                  }
+                  if(isset($last->sections)):
+                    foreach($last->sections as $key=>$value){
+                      if(isset($last) && isset($last->parent)):
+                      $last->parent=str_replace("#child ".$key, $value, $last->parent);
+                      endif;
+                    }
+                  endif;
                }
+                if(isset($last->parent)):
                 echo $last->parent;
-                unset($last)
+                endif;
                ?>
               """
         )
+      else
         break
 
   print:(line)->
@@ -46,15 +54,30 @@ class ViewBuilder
         line=""
         return
       if t instanceof ParentDirective
+        @endRender=true
         parentname= t.getDirective(line).value
         line="""
             <?php
-              $renderstack[]= new stdClass();
               ob_start();
+              if(!isset($renderstack)){
+                $renderstack=[];
+              }
+              array_push($renderstack,new stdClass());
+
               include("#{parentname}.#{@ext}");
+              if(!isset($last)){
+                $last=null;
+              }
               $last=&$renderstack[count($renderstack)-1];
-              $last->parent=ob_get_clean();
+              if(isset($last) && !isset($last->parent)){
+                $last->parent=null;
+              }
+              if(isset($last)):
+                $last->parent=ob_get_clean();
+              endif;
+              if(isset($last) &&!isset($last->section)):
               $last->sections=[];
+              endif;
             ?>
             """
 

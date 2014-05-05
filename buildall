@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+cd $(dirname $0)
+buildapp
+buildtest
+buildcommand
+
+echo "Completed"

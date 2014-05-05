@@ -13,30 +13,31 @@ class CommandLine
     .option("-v, --viewbuild","Flag used to build preview file")
     .parse(args)
 
-    if @program.args[0] is "generate"
-      `debugger`
-      @generate()
-      process.exit(0)
-
-    @program.config ?= "roar.json"
-    @basedir=path.resolve(path.dirname(@program.config))
-    if fs.existsSync(@program.config)
-      @config=JSON.parse(fs.readFileSync(@program.config,{encoding:"utf8"}))
-    else
-      console.log "#{@program.config} doesn't exist"
-      process.exit(0)
-
-
     program=@program
-    if program.preview
-      @preview()
 
-    if program.route
-      @routeBuilder()
+    if program.args[0] is "generate"
+      if program.args.length>1
+        folder=program.args[1]
+      else
+        folder="."
+      @generate(folder)
+    else
+      program.config ?= "roar.json"
+      @basedir=path.resolve(path.dirname(program.config))
+      if fs.existsSync(program.config)
+        @config=JSON.parse(fs.readFileSync(program.config,{encoding:"utf8"}))
 
 
-    if program.viewbuild
-      @viewBuild()
+
+      if program.preview
+        @preview()
+
+      if program.route
+        @routeBuilder()
+
+
+      if program.viewbuild
+        @viewBuild()
 
 
   config:null
@@ -87,12 +88,11 @@ class CommandLine
     dm.buildView(viewbuilder,viewpath,match,exclude,->)
 
 
-  generate:->
+  generate:(folder)->
     dcopy=require("d-copy").DirectoryCopy
-    base=path.resolve(__dirname,"../demo")
-    dest=path.resolve(process.cwd(),"fools");
-    `debugger`
-    d= new dcopy(base,dest,true);
+    base=path.resolve(__dirname,"../base")
+    dest=path.resolve(process.cwd(),folder);
+    d= new dcopy(base,dest);
     d.getFiles()
 
   @getInstance:->

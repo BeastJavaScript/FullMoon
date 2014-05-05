@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+cd $(dirname $0)
+echo "#!/usr/bin/env node" > bin/cli.js
+echo "CommandLine= require(\"../bin/index.js\").CommandLine;" >> bin/cli.js
+echo "CommandLine.getInstance();" >> bin/cli.js

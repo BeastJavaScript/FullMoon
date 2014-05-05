@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+cd $(dirname $0)
+
+coffee-stir -o lib/Application.coffee src/Main.coffee
+coffee -c -o bin -j index.js lib/Application.coffee

@@ -1,5 +1,5 @@
 {TestCase}=require "beast-test"
-{DirectoryManager}= require "../lib/Application.js"
+{DirectoryManager}= require "../bin/index.js"
 async=require "async"
 
 new (class TestDirectoryManager extends TestCase

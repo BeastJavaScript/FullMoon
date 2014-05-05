@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+cd $(dirname $0)
+
+
+coffee-stir -o testSrc/test.build.coffee testSrc/MainTest.coffee
+coffee -c -o test -j test.js testSrc/test.build.coffee
+rm testSrc/test.build.coffee

@@ -1,7 +1,6 @@
-{CommandLine}= require "../lib/Application.js"
+{CommandLine}= require "../bin/index.js"
 
 cmd= CommandLine.getInstance()
-
 
 
 

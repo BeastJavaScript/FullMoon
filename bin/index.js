@@ -454,6 +454,7 @@
       this.bin = bin;
       this.ext = ext;
       this.stack = stack;
+      this.endRender = false;
       this.mr = new MegaFile([this.filename]);
       this.mr.reset();
       this.tools = [];
@@ -467,13 +468,15 @@
         mkdirp(this.bin);
       }
       fs.writeFileSync(this.file(), "");
-      this.print("<?php ini_set('error_reporting', 0);?>");
+      this.print("<?php //ini_set('error_reporting', 0);?>");
       _results = [];
       while (true) {
         if (this.mr.hasNextLine()) {
           _results.push(this.print(this.mr.getNextLine()));
+        } else if (this.endRender) {
+          this.endRender = false;
+          _results.push(this.print("<?php\nif(isset($renderstack) && count($renderstack)>0){\n   $last=&array_pop($renderstack);\n   if(isset($last->sections)):\n     foreach($last->sections as $key=>$value){\n       if(isset($last) && isset($last->parent)):\n       $last->parent=str_replace(\"#child \".$key, $value, $last->parent);\n       endif;\n     }\n   endif;\n}\n if(isset($last->parent)):\n echo $last->parent;\n endif;\n?>"));
         } else {
-          this.print("<?php\nif(isset($renderstack) && count($renderstack)>0){\n   $last=&array_pop($renderstack);\n   foreach($last->sections as $key=>$value){\n     $last->parent=str_replace(\"#child \".$key, $value, $last->parent);\n   }\n}\n echo $last->parent;\n unset($last)\n?>");
           break;
         }
       }
@@ -492,8 +495,9 @@
           return;
         }
         if (t instanceof ParentDirective) {
+          this.endRender = true;
           parentname = t.getDirective(line).value;
-          line = "<?php\n  $renderstack[]= new stdClass();\n  ob_start();\n  include(\"" + parentname + "." + this.ext + "\");\n  $last=&$renderstack[count($renderstack)-1];\n  $last->parent=ob_get_clean();\n  $last->sections=[];\n?>";
+          line = "<?php\n  ob_start();\n  if(!isset($renderstack)){\n    $renderstack=[];\n  }\n  array_push($renderstack,new stdClass());\n\n  include(\"" + parentname + "." + this.ext + "\");\n  if(!isset($last)){\n    $last=null;\n  }\n  $last=&$renderstack[count($renderstack)-1];\n  if(isset($last) && !isset($last->parent)){\n    $last->parent=null;\n  }\n  if(isset($last)):\n    $last->parent=ob_get_clean();\n  endif;\n  if(isset($last) &&!isset($last->section)):\n  $last->sections=[];\n  endif;\n?>";
         }
         if (t instanceof SectionDirective) {
           this.sectionName = t.getDirective(line).value;
@@ -1166,35 +1170,36 @@
 
   CommandLine = (function() {
     function CommandLine(args) {
-      var program, _base;
+      var folder, program;
       this.program = require("commander");
       this.program.version("0.0.1").option("-w, --watch", "this will watch the directory and re-render files").option("-c, --config [value]", "This is the path to the roar.json file with the configuration").option("-r, --route", "Build the route file from the route.json in the routebuilder location").option("-p, --preview", "Flag used to build preview file").option("-v, --viewbuild", "Flag used to build preview file").parse(args);
-      if (this.program.args[0] === "generate") {
-        debugger;
-        this.generate();
-        process.exit(0);
-      }
-      if ((_base = this.program).config == null) {
-        _base.config = "roar.json";
-      }
-      this.basedir = path.resolve(path.dirname(this.program.config));
-      if (fs.existsSync(this.program.config)) {
-        this.config = JSON.parse(fs.readFileSync(this.program.config, {
-          encoding: "utf8"
-        }));
-      } else {
-        console.log("" + this.program.config + " doesn't exist");
-        process.exit(0);
-      }
       program = this.program;
-      if (program.preview) {
-        this.preview();
-      }
-      if (program.route) {
-        this.routeBuilder();
-      }
-      if (program.viewbuild) {
-        this.viewBuild();
+      if (program.args[0] === "generate") {
+        if (program.args.length > 1) {
+          folder = program.args[1];
+        } else {
+          folder = ".";
+        }
+        this.generate(folder);
+      } else {
+        if (program.config == null) {
+          program.config = "roar.json";
+        }
+        this.basedir = path.resolve(path.dirname(program.config));
+        if (fs.existsSync(program.config)) {
+          this.config = JSON.parse(fs.readFileSync(program.config, {
+            encoding: "utf8"
+          }));
+        }
+        if (program.preview) {
+          this.preview();
+        }
+        if (program.route) {
+          this.routeBuilder();
+        }
+        if (program.viewbuild) {
+          this.viewBuild();
+        }
       }
     }
 
@@ -1244,13 +1249,12 @@
       return dm.buildView(viewbuilder, viewpath, match, exclude, function() {});
     };
 
-    CommandLine.prototype.generate = function() {
+    CommandLine.prototype.generate = function(folder) {
       var base, d, dcopy, dest;
       dcopy = require("d-copy").DirectoryCopy;
-      base = path.resolve(__dirname, "../demo");
-      dest = path.resolve(process.cwd(), "fools");
-      debugger;
-      d = new dcopy(base, dest, true);
+      base = path.resolve(__dirname, "../base");
+      dest = path.resolve(process.cwd(), folder);
+      d = new dcopy(base, dest);
       return d.getFiles();
     };
 

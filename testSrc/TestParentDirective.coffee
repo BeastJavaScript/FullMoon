@@ -1,5 +1,5 @@
 {TestCase} =require "beast-test"
-{ParentDirective}= require "../lib/Application.js"
+{ParentDirective}= require "../bin/index.js"
 
 new (class ParentDirectiveTest extends TestCase
   constructor:->

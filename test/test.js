@@ -6,7 +6,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  PHPRouteBuilder = require("../lib/Application.js").PHPRouteBuilder;
+  PHPRouteBuilder = require("../bin/index.js").PHPRouteBuilder;
 
   new (RouteTest = (function(_super) {
     __extends(RouteTest, _super);
@@ -29,7 +29,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  Variable = require("../lib/Application.js").Variable;
+  Variable = require("../bin/index.js").Variable;
 
   new (PlaceholderTest = (function(_super) {
     __extends(PlaceholderTest, _super);
@@ -56,7 +56,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  DirectoryManager = require("../lib/Application.js").DirectoryManager;
+  DirectoryManager = require("../bin/index.js").DirectoryManager;
 
   async = require("async");
 
@@ -111,7 +111,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  SectionDirective = require("../lib/Application.js").SectionDirective;
+  SectionDirective = require("../bin/index.js").SectionDirective;
 
   new (SectionDirectiveTest = (function(_super) {
     __extends(SectionDirectiveTest, _super);
@@ -136,7 +136,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  RepeatDirective = require("../lib/Application.js").RepeatDirective;
+  RepeatDirective = require("../bin/index.js").RepeatDirective;
 
   new (RepeatDirectiveTest = (function(_super) {
     __extends(RepeatDirectiveTest, _super);
@@ -162,7 +162,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  ParentDirective = require("../lib/Application.js").ParentDirective;
+  ParentDirective = require("../bin/index.js").ParentDirective;
 
   new (ParentDirectiveTest = (function(_super) {
     __extends(ParentDirectiveTest, _super);
@@ -187,7 +187,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  RenderDirective = require("../lib/Application.js").RenderDirective;
+  RenderDirective = require("../bin/index.js").RenderDirective;
 
   new (RenderDirectiveTest = (function(_super) {
     __extends(RenderDirectiveTest, _super);
@@ -212,7 +212,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  NeedDirective = require("../lib/Application.js").NeedDirective;
+  NeedDirective = require("../bin/index.js").NeedDirective;
 
   new (TestNeedDirectiveTest = (function(_super) {
     __extends(TestNeedDirectiveTest, _super);
@@ -237,7 +237,7 @@
 
   TestCase = require("beast-test").TestCase;
 
-  Directive = require("../lib/Application.js").Directive;
+  Directive = require("../bin/index.js").Directive;
 
   new (TestDirective = (function(_super) {
     __extends(TestDirective, _super);

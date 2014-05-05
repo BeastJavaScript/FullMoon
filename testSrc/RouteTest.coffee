@@ -1,5 +1,5 @@
 {TestCase}= require "beast-test"
-{PHPRouteBuilder}= require "../lib/Application.js"
+{PHPRouteBuilder}= require "../bin/index.js"
 
 
 new (class RouteTest extends TestCase

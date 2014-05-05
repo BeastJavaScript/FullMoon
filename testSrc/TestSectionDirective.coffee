@@ -1,5 +1,5 @@
 {TestCase} = require "beast-test"
-{SectionDirective}= require "../lib/Application.js"
+{SectionDirective}= require "../bin/index.js"
 
 new (class SectionDirectiveTest extends TestCase
   constructor:->

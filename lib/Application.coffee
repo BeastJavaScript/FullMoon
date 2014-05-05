@@ -307,6 +307,7 @@ mkdirp= require "mkdirp"
 {MegaFile}= require "mega-reader"
 class ViewBuilder
   constructor:(@filename,@name,@bin,@ext,@stack)->
+    @endRender=false;
     @mr= new MegaFile([@filename])
     @mr.reset()
     @tools=[]
@@ -317,25 +318,32 @@ class ViewBuilder
     unless fs.existsSync(@bin)
       mkdirp(@bin)
     fs.writeFileSync(@file(),"");
-    @print("<?php ini_set('error_reporting', 0);?>")
+    @print("<?php //ini_set('error_reporting', 0);?>")
     while true
       if @mr.hasNextLine()
         @print(@mr.getNextLine())
-      else
+      else if @endRender
+        @endRender=false
         @print(
               """
                <?php
                if(isset($renderstack) && count($renderstack)>0){
                   $last=&array_pop($renderstack);
-                  foreach($last->sections as $key=>$value){
-                    $last->parent=str_replace("#child ".$key, $value, $last->parent);
-                  }
+                  if(isset($last->sections)):
+                    foreach($last->sections as $key=>$value){
+                      if(isset($last) && isset($last->parent)):
+                      $last->parent=str_replace("#child ".$key, $value, $last->parent);
+                      endif;
+                    }
+                  endif;
                }
+                if(isset($last->parent)):
                 echo $last->parent;
-                unset($last)
+                endif;
                ?>
               """
         )
+      else
         break
 
   print:(line)->
@@ -347,15 +355,30 @@ class ViewBuilder
         line=""
         return
       if t instanceof ParentDirective
+        @endRender=true
         parentname= t.getDirective(line).value
         line="""
             <?php
-              $renderstack[]= new stdClass();
               ob_start();
+              if(!isset($renderstack)){
+                $renderstack=[];
+              }
+              array_push($renderstack,new stdClass());
+
               include("#{parentname}.#{@ext}");
+              if(!isset($last)){
+                $last=null;
+              }
               $last=&$renderstack[count($renderstack)-1];
-              $last->parent=ob_get_clean();
+              if(isset($last) && !isset($last->parent)){
+                $last->parent=null;
+              }
+              if(isset($last)):
+                $last->parent=ob_get_clean();
+              endif;
+              if(isset($last) &&!isset($last->section)):
               $last->sections=[];
+              endif;
             ?>
             """
 
@@ -837,30 +860,31 @@ class CommandLine
     .option("-v, --viewbuild","Flag used to build preview file")
     .parse(args)
 
-    if @program.args[0] is "generate"
-      `debugger`
-      @generate()
-      process.exit(0)
-
-    @program.config ?= "roar.json"
-    @basedir=path.resolve(path.dirname(@program.config))
-    if fs.existsSync(@program.config)
-      @config=JSON.parse(fs.readFileSync(@program.config,{encoding:"utf8"}))
-    else
-      console.log "#{@program.config} doesn't exist"
-      process.exit(0)
-
-
     program=@program
-    if program.preview
-      @preview()
 
-    if program.route
-      @routeBuilder()
+    if program.args[0] is "generate"
+      if program.args.length>1
+        folder=program.args[1]
+      else
+        folder="."
+      @generate(folder)
+    else
+      program.config ?= "roar.json"
+      @basedir=path.resolve(path.dirname(program.config))
+      if fs.existsSync(program.config)
+        @config=JSON.parse(fs.readFileSync(program.config,{encoding:"utf8"}))
 
 
-    if program.viewbuild
-      @viewBuild()
+
+      if program.preview
+        @preview()
+
+      if program.route
+        @routeBuilder()
+
+
+      if program.viewbuild
+        @viewBuild()
 
 
   config:null
@@ -911,12 +935,11 @@ class CommandLine
     dm.buildView(viewbuilder,viewpath,match,exclude,->)
 
 
-  generate:->
+  generate:(folder)->
     dcopy=require("d-copy").DirectoryCopy
-    base=path.resolve(__dirname,"../demo")
-    dest=path.resolve(process.cwd(),"fools");
-    `debugger`
-    d= new dcopy(base,dest,true);
+    base=path.resolve(__dirname,"../base")
+    dest=path.resolve(process.cwd(),folder);
+    d= new dcopy(base,dest);
     d.getFiles()
 
   @getInstance:->
@@ -925,7 +948,6 @@ class CommandLine
     CommandLine.interface
 
 exports.CommandLine=CommandLine
-
 
 
 

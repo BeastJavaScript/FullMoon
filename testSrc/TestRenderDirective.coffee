@@ -1,5 +1,5 @@
 {TestCase} =require "beast-test"
-{RenderDirective}= require "../lib/Application.js"
+{RenderDirective}= require "../bin/index.js"
 
 new (class RenderDirectiveTest extends TestCase
   constructor:->
