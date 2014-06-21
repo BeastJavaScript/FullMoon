@@ -1,0 +1,6 @@
+[Tue May 06 2014 14:29:07 GMT-0400 (Eastern Daylight Time)] DEBUG entering DirectoryManager 1399400947946
+[Tue May 06 2014 14:29:07 GMT-0400 (Eastern Daylight Time)] DEBUG finished reading the directory files for creating the views
+[Tue May 06 2014 14:29:07 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\base\viewbuilder\baselayout.html
+[Tue May 06 2014 14:29:07 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\base\viewbuilder\home.html
+[Tue May 06 2014 14:29:07 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\base\viewbuilder\menu.html
+[Tue May 06 2014 14:29:07 GMT-0400 (Eastern Daylight Time)] DEBUG moving on to process file c:\sites\fullmoon\base\viewbuilder\style.html

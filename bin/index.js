@@ -475,7 +475,7 @@
           _results.push(this.print(this.mr.getNextLine()));
         } else if (this.endRender) {
           this.endRender = false;
-          _results.push(this.print("<?php\nif(isset($renderstack) && count($renderstack)>0){\n   $last=&array_pop($renderstack);\n   if(isset($last->sections)):\n     foreach($last->sections as $key=>$value){\n       if(isset($last) && isset($last->parent)):\n       $last->parent=str_replace(\"#child \".$key, $value, $last->parent);\n       endif;\n     }\n   endif;\n}\n if(isset($last->parent)):\n echo $last->parent;\n endif;\n?>"));
+          _results.push(this.print("<?php\nif(isset($renderstack) && count($renderstack)>0){\n   $last=array_pop($renderstack);\n   if(isset($last->sections)):\n     foreach($last->sections as $key=>$value){\n       if(isset($last) && isset($last->parent)):\n       $last->parent=str_replace(\"#child \".$key, $value, $last->parent);\n       endif;\n     }\n   endif;\n}\n if(isset($last->parent)):\n echo $last->parent;\n endif;\n?>"));
         } else {
           break;
         }
@@ -497,7 +497,7 @@
         if (t instanceof ParentDirective) {
           this.endRender = true;
           parentname = t.getDirective(line).value;
-          line = "<?php\n  ob_start();\n  if(!isset($renderstack)){\n    $renderstack=[];\n  }\n  array_push($renderstack,new stdClass());\n\n  include(\"" + parentname + "." + this.ext + "\");\n  if(!isset($last)){\n    $last=null;\n  }\n  $last=&$renderstack[count($renderstack)-1];\n  if(isset($last) && !isset($last->parent)){\n    $last->parent=null;\n  }\n  if(isset($last)):\n    $last->parent=ob_get_clean();\n  endif;\n  if(isset($last) &&!isset($last->section)):\n  $last->sections=[];\n  endif;\n?>";
+          line = "<?php\n  ob_start();\n  if(!isset($renderstack)){\n    $renderstack=[];\n  }\n  array_push($renderstack,new stdClass());\n\n  include(\"" + parentname + "." + this.ext + "\");\n  if(!isset($last)){\n    $last=null;\n  }\n  $last=$renderstack[count($renderstack)-1];\n  if(isset($last) && !isset($last->parent)){\n    $last->parent=null;\n  }\n  if(isset($last)):\n    $last->parent=ob_get_clean();\n  endif;\n  if(isset($last) &&!isset($last->section)):\n  $last->sections=[];\n  endif;\n?>";
         }
         if (t instanceof SectionDirective) {
           this.sectionName = t.getDirective(line).value;
